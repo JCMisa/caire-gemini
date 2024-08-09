@@ -16,7 +16,7 @@ const Statistics = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap -m-4 text-center">
-                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj">
+                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj shadow-lg">
                             <div className="border-2 px-4 py-6 rounded-lg min-h-72 max-h-70">
                                 <HeartPulse className="text-primary w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-light">1 billion</h2>
@@ -25,7 +25,7 @@ const Statistics = () => {
                                 <a href='https://www.who.int/news/item/18-09-2023-billions-left-behind-on-the-path-to-universal-health-coverage' target='_blank' className='text-[8px] mt-2 text-start cursor-pointer underline'>World Health Organization (WHO)</a>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj">
+                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj shadow-lg">
                             <div className="border-2 px-4 py-6 rounded-lg min-h-72 max-h-70">
                                 <Ambulance className="text-primary w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-light">17 million</h2>
@@ -34,7 +34,7 @@ const Statistics = () => {
                                 <a href='https://www.healthdata.org/' target='_blank' className='text-[8px] mt-2 text-start cursor-pointer underline'>Institute for Health Metrics and Evaluation (IHME)</a>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj">
+                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj shadow-lg">
                             <div className="border-2 px-4 py-6 rounded-lg max-h-72">
                                 <Cross className="text-primary w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-light">70%</h2>
@@ -43,7 +43,7 @@ const Statistics = () => {
                                 <a href='https://www.cdc.gov/flu/symptoms/symptoms.htm' target='_blank' className='text-[8px] mt-2 text-start cursor-pointer underline'>Centers for Disease Control and Prevention (CDC)</a>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj">
+                        <div className="p-4 md:w-1/4 sm:w-1/2 w-full card-proj shadow-lg">
                             <div className="border-2 px-4 py-6 rounded-lg max-h-72">
                                 <Activity className="text-primary w-12 h-12 mb-3 inline-block" />
                                 <h2 className="title-font font-medium text-3xl text-light">Trillions of dollars</h2>

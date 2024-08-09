@@ -18,10 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "#141517",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#06070a",
+        background: "#141517",
         foreground: "#ffffff",
         primary: {
           DEFAULT: "#0F6292",
@@ -38,9 +38,9 @@ module.exports = {
           foreground: "hsl(var(--secondary-foreground))",
         },
         dark: {
-          DEFAULT: "#06070a",
+          DEFAULT: "#0e0f0f",
           100: "#0d0f14",
-          200: "#0e0f0f",
+          200: "#1b1b1c",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {

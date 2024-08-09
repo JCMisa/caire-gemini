@@ -13,7 +13,7 @@ const Header = () => {
     const { user } = useUser();
 
     return (
-        <div className="flex p-4 items-center justify-between bg-dark shadow-md">
+        <div className="flex p-4 items-center justify-between shadow-md">
             <Link href={'/'}>
                 <div className="flex gap-1 items-center">
                     <Image src={"/cAIre-logo.png"} width={40} height={40} alt="main logo" />

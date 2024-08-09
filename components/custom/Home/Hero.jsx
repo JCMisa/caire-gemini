@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Hero = () => {
@@ -13,9 +14,11 @@ const Hero = () => {
                             Experience personalized health guidance tailored to your unique needs, access expert-backed information and actionable health plans, monitor your health metrics and track your progress over time, receive timely reminders and notifications to stay on top of your well-being, and enjoy peace of mind with 24/7 access to your health assistant.
                         </p>
                         <div className="flex justify-center">
-                            <button className="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary-200 rounded text-lg">
-                                Get Started
-                            </button>
+                            <Link href={'/dashboard'}>
+                                <button className="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary-200 rounded text-lg">
+                                    Get Started
+                                </button>
+                            </Link>
                             <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
                                 Learn More
                             </button>

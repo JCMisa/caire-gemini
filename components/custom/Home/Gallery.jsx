@@ -8,7 +8,7 @@ const Gallery = () => {
             <section className="text-gray-400 body-font">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
                     <div className="lg:w-2/3 mx-auto">
-                        <div className="flex flex-wrap w-full bg-dark-100 py-32 px-10 relative mb-4">
+                        <div className="flex flex-wrap w-full bg-dark-200 py-32 px-10 relative mb-4">
                             <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
                             <div className="text-center relative z-10 w-full">
                                 <h2 className="text-2xl text-light font-medium title-font mb-2">Describe Your Symptoms</h2>
@@ -22,7 +22,7 @@ const Gallery = () => {
                         </div>
                         <div className="flex flex-wrap -mx-2">
                             <div className="px-2 w-1/2">
-                                <div className="flex flex-wrap w-full bg-dark-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+                                <div className="flex flex-wrap w-full bg-dark-200 sm:py-24 py-16 sm:px-10 px-6 relative">
                                     <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
                                     <div className="text-center relative z-10 w-full">
                                         <h2 className="text-xl text-light font-medium title-font mb-2">Get Personalized Insights</h2>
@@ -36,7 +36,7 @@ const Gallery = () => {
                                 </div>
                             </div>
                             <div className="px-2 w-1/2">
-                                <div className="flex flex-wrap w-full bg-dark-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+                                <div className="flex flex-wrap w-full bg-dark-200 sm:py-24 py-16 sm:px-10 px-6 relative">
                                     <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
                                     <div className="text-center relative z-10 w-full">
                                         <h2 className="text-xl text-light font-medium title-font mb-2">Track and Manage Your Health</h2>
