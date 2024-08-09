@@ -21,16 +21,66 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { LoaderCircle } from 'lucide-react';
+import { toast } from 'sonner';
+import { db } from '@/utils/db';
+import { Assessment, Result } from '@/utils/schema';
+import moment from 'moment';
+import { useUser } from '@clerk/nextjs';
+import { chatSession } from '@/utils/gemini';
+import { v4 as uuidv4 } from 'uuid';
 
 const AddAssessment = () => {
+    const { user } = useUser();
+
+    const [geminiResponse, setGeminiResponse] = useState()
     const [loading, setLoading] = useState(false)
     const [illness, setIllness] = useState()
     const [level, setLevel] = useState()
 
     const onCreateAssessment = async () => {
         setLoading(true)
-        console.log(illness, level);
-        setLoading(false)
+        try {
+            const randomGeneratedStringId = uuidv4();
+
+            const result = await db.insert(Assessment).values({
+                illness: illness,
+                level: level,
+                resolved: false,
+                createdAt: moment().format("MM-DD-yyyy"),
+                createdBy: user?.primaryEmailAddress?.emailAddress,
+                resultReferenceId: randomGeneratedStringId
+            })
+            if (result) {
+                toast(
+                    <p className='text-sm font-bold text-green-500'>Assessment added successfully</p>
+                )
+
+                const prompt = `Illness: ${illness}, level: ${level}, based on the illness and level, generate a json response with properties symptoms with values of list of strings, medicines with values of list of strings, and advice with value of 5 sentences string for the said illness and severity level. Make sure that the response is only the JSON response.`
+
+                const aiResponse = await chatSession.sendMessage(prompt);
+
+                const response = aiResponse.response
+                    .text()
+                    .replace("```json", "")
+                    .replace("```", "");
+
+                if (response) {
+                    const data = await db.insert(Result).values({
+                        assessmentReferenceId: randomGeneratedStringId,
+                        aiResult: response
+                    }).returning({ aiResult: Result?.aiResult })
+                    console.log("assessment result: ", data[0]);
+                    setGeminiResponse(data[0])
+                }
+            }
+        } catch (error) {
+            toast(
+                <p className='text-sm font-bold text-red-500'>Internal error occured while adding assessment</p>
+            )
+            console.log(error);
+        } finally {
+            setLoading(false)
+        }
     }
 
     return (
