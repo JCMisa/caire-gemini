@@ -9,7 +9,7 @@ const Gallery = () => {
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
                     <div className="lg:w-2/3 mx-auto">
                         <div className="flex flex-wrap w-full bg-dark-200 py-32 px-10 relative mb-4">
-                            <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
+                            <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/caire-gemini1.png" />
                             <div className="text-center relative z-10 w-full">
                                 <h2 className="text-2xl text-light font-medium title-font mb-2">Describe Your Symptoms</h2>
                                 <p className="leading-relaxed">Start your health journey by providing clear details about how you're feeling.</p>
@@ -23,7 +23,7 @@ const Gallery = () => {
                         <div className="flex flex-wrap -mx-2">
                             <div className="px-2 w-1/2">
                                 <div className="flex flex-wrap w-full bg-dark-200 sm:py-24 py-16 sm:px-10 px-6 relative">
-                                    <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
+                                    <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/caire-gemini2.png" />
                                     <div className="text-center relative z-10 w-full">
                                         <h2 className="text-xl text-light font-medium title-font mb-2">Get Personalized Insights</h2>
                                         <p className="leading-relaxed">Receive tailored recommendations based on your symptoms.</p>
@@ -37,7 +37,7 @@ const Gallery = () => {
                             </div>
                             <div className="px-2 w-1/2">
                                 <div className="flex flex-wrap w-full bg-dark-200 sm:py-24 py-16 sm:px-10 px-6 relative">
-                                    <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/sample-img.png" />
+                                    <img alt="gallery" className="w-full object-cover h-full object-center block opacity-50 hover:opacity-95 transition-all absolute inset-0" src="/caire-gemini3.png" />
                                     <div className="text-center relative z-10 w-full">
                                         <h2 className="text-xl text-light font-medium title-font mb-2">Track and Manage Your Health</h2>
                                         <p className="leading-relaxed">Stay informed and in control of your health conditions.</p>
