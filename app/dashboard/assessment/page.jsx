@@ -9,7 +9,7 @@ const AssessmentPage = () => {
     const router = useRouter()
 
     return (
-        <div>
+        <div className='relative'>
             <h2 className="font-bold text-3xl flex items-center gap-2">
                 <ArrowLeft width={20} height={20} className="cursor-pointer" onClick={() => router.back()} />
                 My Assessments

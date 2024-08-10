@@ -93,7 +93,7 @@ const AddAssessment = () => {
                     </div>
                 </DialogTrigger>
                 <DialogTrigger asChild className="block sm:hidden">
-                    <div className="flex float-end justify-center sm:hidden w-14 h-14 items-center rounded-full bg-primary cursor-pointer">
+                    <div className="flex absolute top-0 right-0 float-end justify-center sm:hidden w-14 h-14 items-center rounded-full bg-primary cursor-pointer">
                         <h2 className="text-3xl">+</h2>
                     </div>
                 </DialogTrigger>

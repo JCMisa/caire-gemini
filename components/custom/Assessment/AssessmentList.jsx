@@ -7,6 +7,7 @@ import { Assessment } from '@/utils/schema'
 import { desc, eq } from 'drizzle-orm'
 import { useUser } from '@clerk/nextjs'
 import { toast } from 'sonner'
+import AssessmentItem from './AssessmentItem'
 
 const AssessmentList = () => {
     const { user } = useUser();
@@ -24,6 +25,8 @@ const AssessmentList = () => {
 
             if (result) {
                 setAssessmentList(result)
+                console.log(result);
+
             }
         } catch (error) {
             toast(
@@ -37,13 +40,23 @@ const AssessmentList = () => {
     useEffect(() => {
         user && getAssessmentList();
     }, [user])
+
     return (
         <div className="mt-7">
-            <div className="grid grid-cols-1 gap-5">
+            <div className="mb-5">
                 {/* <CreateBudget refreshData={() => getBudgetList()} /> */}
                 <AddAssessment />
-
-                {/* TODO: use and display assessmentList here */}
+            </div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10 sm:mt-0'>
+                {
+                    assessmentList && (
+                        assessmentList.map((assessment, index) => (
+                            <div key={assessment?.id || index} className=''>
+                                <AssessmentItem assessment={assessment} />
+                            </div>
+                        ))
+                    )
+                }
             </div>
         </div>
     )
