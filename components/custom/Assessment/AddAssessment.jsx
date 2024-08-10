@@ -29,7 +29,7 @@ import { useUser } from '@clerk/nextjs';
 import { chatSession } from '@/utils/gemini';
 import { v4 as uuidv4 } from 'uuid';
 
-const AddAssessment = () => {
+const AddAssessment = ({ refreshData }) => {
     const { user } = useUser();
 
     const [geminiResponse, setGeminiResponse] = useState()
@@ -54,6 +54,7 @@ const AddAssessment = () => {
                 toast(
                     <p className='text-sm font-bold text-green-500'>Assessment added successfully</p>
                 )
+                refreshData(); // get the new set of assessment list real time
 
                 const prompt = `Illness: ${illness}, level: ${level}, based on the illness and level, generate a json response with properties symptoms with values of list of strings, medicines with values of list of strings, and advice with value of 5 sentences string for the said illness and severity level. Make sure that the response is only the JSON response.`
 
@@ -87,13 +88,13 @@ const AddAssessment = () => {
         <div>
             <Dialog>
                 <DialogTrigger asChild className="hidden sm:flex">
-                    <div className="bg-primary min-h-[100px] p-10 rounded-md items-center flex flex-col cursor-pointer hover:shadow-md transition-all">
+                    <div className="linear-bg min-h-[100px] p-10 rounded-md items-center flex flex-col cursor-pointer hover:shadow-md transition-all">
                         <h2 className="text-3xl">+</h2>
                         <h2>Create New Assessment</h2>
                     </div>
                 </DialogTrigger>
                 <DialogTrigger asChild className="block sm:hidden">
-                    <div className="flex absolute top-0 right-0 float-end justify-center sm:hidden w-14 h-14 items-center rounded-full bg-primary cursor-pointer">
+                    <div className="flex absolute top-0 right-0 float-end justify-center sm:hidden w-14 h-14 items-center rounded-full linear-bg cursor-pointer">
                         <h2 className="text-3xl">+</h2>
                     </div>
                 </DialogTrigger>

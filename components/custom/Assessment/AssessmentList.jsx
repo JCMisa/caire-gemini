@@ -44,17 +44,24 @@ const AssessmentList = () => {
     return (
         <div className="mt-7">
             <div className="mb-5">
-                {/* <CreateBudget refreshData={() => getBudgetList()} /> */}
-                <AddAssessment />
+                {(!assessmentList && isLoading) ? (
+                    <div className='bg-dark-200 min-w-full min-h-40 animate-pulse'></div>
+                ) : (
+                    <AddAssessment refreshData={() => getAssessmentList()} />
+                )}
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10 sm:mt-0'>
                 {
-                    assessmentList && (
+                    (assessmentList && !isLoading) ? (
                         assessmentList.map((assessment, index) => (
                             <div key={assessment?.id || index} className=''>
                                 <AssessmentItem assessment={assessment} />
                             </div>
                         ))
+                    ) : (
+                        <div>
+                            <div className='bg-dark-200 min-w-full min-h-[234px] animate-pulse'></div>
+                        </div>
                     )
                 }
             </div>

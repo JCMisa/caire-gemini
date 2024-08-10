@@ -25,7 +25,7 @@ const SideNav = ({ isShow }) => {
         },
         {
             id: 3,
-            name: "Status",
+            name: "Manage Status",
             icon: <Activity />,
             path: "/dashboard/status",
         },
@@ -49,7 +49,7 @@ const SideNav = ({ isShow }) => {
                                 <Link href={menu.path} key={menu.id || index}>
                                     <div>
                                         <h2
-                                            className={`flex gap-2 items-center text-white font-medium p-5 cursor-pointer rounded-md hover:text-light hover:bg-primary-200 transition-all mb-2 ${path == menu.path && "text-light bg-primary"
+                                            className={`flex gap-2 items-center text-white font-medium p-5 cursor-pointer rounded-md hover:text-light hover:bg-primary transition-all mb-2 ${path == menu.path && "text-light linear-bg"
                                                 }`}
                                         >
                                             {menu.icon}
