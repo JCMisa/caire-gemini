@@ -49,7 +49,6 @@ const StatusPage = () => {
     }
 
     const deleteAssessment = async (assessment) => {
-        s
         setIsLoading(true)
         try {
             const data = await db.delete(Assessment)
