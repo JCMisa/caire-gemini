@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="text-gray-400 bg-semiDark body-font">
                 <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
                     <a className="flex title-font font-medium items-center md:justify-start justify-center text-white" href='#top'>
-                        <Image src={'/cAIre-logo.png'} alt='logo' width={40} height={40} />
+                        <Image src={'/caire-logo.png'} alt='logo' width={40} height={40} />
                         <span className="ml-3 text-xl text-light">c<span className='logo-text'>AI</span>re</span>
                     </a>
                     <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2024 cAIre —
